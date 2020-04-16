@@ -1,5 +1,14 @@
-<div class="body">
+<!-- <div class="body">
 <app-header></app-header> 
 <app-main></app-main>
 <app-footer></app-footer>
-</div> 
+</div>  -->
+ <!-- <div ><app-login></app-login></div>  -->
+<div class="body" *ngIf="loggedIn">
+    <app-header></app-header>
+    <app-main></app-main>
+    <app-footer></app-footer>
+</div>
+<div *ngIf="!loggedIn">
+    <app-login></app-login>
+</div>

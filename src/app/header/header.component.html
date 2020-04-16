@@ -10,11 +10,13 @@
 <body>
   <div>
     
-    <nav class="navbar navbar-dark bg-dark">
+    <!-- <nav class="navbar navbar-dark bg-dark"> -->
+      <nav class="navbar navbar-dark" style="background-color:#009688;">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+      <!-- <div><h2 style="color: white;">SIEMENS</h2></div> -->
+      <div><img src="assets/img/siemens_logo.svg" class="card-img-top"  style="height:25px;" alt="Siemens" ></div>
       <ul class="nav justify-content-center">
         <li
         *ngFor="let menuItem of menuItems"
@@ -22,8 +24,10 @@
         (click)="handleMenuClick($event)"
         style=" margin-right:30px;"
         > 
+        
         <!---<a href="{{menuItem.link}}" id="{{menuItem.label}}">{{menuItem.label}}</a>-->
-        <a [routerLink]="[menuItem.link]"
+        <a [routerLink]="[menuItem.link]" 
+                 style="color:white; font-size: larger;font-weight: bold;"
                  routerLinkActive="router-link-active"
                  id="{{menuItem.label}}">{{menuItem.label}}</a>   
         </li>
@@ -44,6 +48,9 @@
         </li>
        
       </ul> -->
+      <ul style="text-align: right">
+        <input type="button" class="btn btn-light" value="Log Out" (click)="onLogOut()">
+      </ul>
     </nav>
   
   </div>

@@ -11,6 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { TestComponent } from './test/test.component';
+import { LoginComponent } from './login/login.component';
+
+
 
 
 @NgModule({
@@ -21,7 +24,8 @@ import { TestComponent } from './test/test.component';
     KanbanComponent,
     HeaderComponent,
     FooterComponent,
-    TestComponent
+    TestComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
